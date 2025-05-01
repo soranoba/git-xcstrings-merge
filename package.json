@@ -1,7 +1,7 @@
 {
-  "name": "git-json-merge",
+  "name": "git-xcstrings-merge",
   "version": "1.0.0",
-  "description": "a git merge driver for json files",
+  "description": "a git merge driver for xcstrings files",
   "scripts": {
     "postversion": "git push && git push --tags",
     "preversion": "npm test",
@@ -9,17 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jonatanpedersen/git-json-merge.git"
+    "url": "git+https://github.com/soranoba/git-xcstrings-merge.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jonatanpedersen/git-json-merge/issues"
+    "url": "https://github.com/soranoba/git-xcstrings-merge/issues"
   },
   "main": "lib/git-json-merge.js",
-  "homepage": "https://github.com/jonatanpedersen/git-json-merge#readme",
+  "homepage": "https://github.com/soranoba/git-xcstrings-merge#readme",
   "bin": {
-    "git-json-merge": "bin/git-json-merge"
+    "git-xcstrings-merge": "bin/git-xcstrings-merge"
   },
   "dependencies": {
     "detect-indent": "^6.0.0",

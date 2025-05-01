@@ -35,7 +35,8 @@ describe('gitJsonMerge', function () {
 });
 
 function toString (object) {
-		return JSON.stringify(object);
+		let json = JSON.stringify(object);
+		return json.replace(/"((?:\\.|[^"\\])*)"\s*:/g, '"$1" :');
 }
 
 function clone (object) {

@@ -14,7 +14,7 @@ This can be done one of two ways, globally or per-project/directory:
 Install:
 
 ```sh
-npm install --global git-json-merge
+npm install --global git+https://github.com/soranoba/git-xcstrings-merge.git
 ```
 
 Add to `~/.gitconfig`:
@@ -22,15 +22,15 @@ Add to `~/.gitconfig`:
 ```ini
 [core]
     attributesfile = ~/.gitattributes
-[merge "json"]
-    name = custom merge driver for json files
-    driver = git-json-merge %A %O %B
+[merge "xcstrings"]
+    name = custom merge driver for xcstrings files
+    driver = git-xcstrings-merge %A %O %B
 ```
 
 Create `~/.gitattributes`:
 
 ```ini
-*.json merge=json
+*.xcstrings merge=xcstrings
 ```
 
 ### Single project / directory
@@ -38,14 +38,14 @@ Create `~/.gitattributes`:
 Install:
 
 ```sh
-npm install git-json-merge --save-dev
+npm install git+https://github.com/soranoba/git-xcstrings-merge.git --save-dev
 ```
 
 Update git config:
 
 ```sh
-git config merge.json.driver "$(npm bin)/git-json-merge %A %O %B"
-git config merge.json.name "custom merge driver for json files"
+git config merge.xcstrings.driver "$(npm bin)/git-xcstrings-merge %A %O %B"
+git config merge.xcstrings.name "custom merge driver for xcstrings files"
 ```
 
 Add the same `.gitattributes` where desired and commit.
